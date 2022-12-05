@@ -40,7 +40,7 @@ export default class Sprite2 extends Sprite {
     this.moveAhead();
     this.costume = "costume1";
     yield* this.askAndWait(
-      "Use arrow keys to move me to the reagon were tobacco originated. Then Press space. Respond OK to continue"
+      "Use arrow keys to move the purple figure to the reagon were tobacco originated. Then Press space. Press Enter to continue"
     );
     /* TODO: Implement sensing_setdragmode */ null;
     while (true) {
@@ -65,15 +65,15 @@ export default class Sprite2 extends Sprite {
           "Tobacco began being used in in North and South America for mainly religious purposes! OK to continue"
         );
         yield* this.askAndWait(
-          "How many years approximately was tobacco invented "
+          "How many years ago approximately was tobacco discovered "
         );
         if (this.answer == 8000) {
           yield* this.sayAndWait("Correct!", 2);
           yield* this.askAndWait(
-            "Tobacco was found about 8000 years ago. OK to continue"
+            "Tobacco was found about 8000 years ago. Enter to continue"
           );
           yield* this.askAndWait(
-            "TRUE or FALSE: Tobacco costs the world about 3 trillion each year in health bills? t=true f=false "
+            "TRUE or FALSE: Tobacco costs the world about trillions each year in health bills? t=true f=false "
           );
           if (this.answer == "t") {
             yield* this.sayAndWait("Correct", 2);
@@ -83,7 +83,7 @@ export default class Sprite2 extends Sprite {
             if (this.answer == "f") {
               this.say("ONE LAST QUESTION! ALMOST DONE");
               yield* this.askAndWait(
-                "True or False: Tobacco a huge part of the economy? Did it get traded to Europe and Africa? "
+                "True or False: Tobacco was a huge part of the economy? It got traded to Europe and Africa? "
               );
               if (this.answer == "t") {
                 this.size = 0;
